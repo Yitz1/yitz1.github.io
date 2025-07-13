@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isaac (Yitz) Friedman</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="desktop">
+    <div class="icon" onclick="toggleWindow('about')">
+      <img src="assets/exe.png" alt="About Me"/>
+      <span>AboutMe.exe</span>
+    </div>
+    <div class="icon" onclick="window.open('https://www.strava.com/athletes/114904137')">
+      <img src="assets/log.png" alt="Strava"/>
+      <span>Strava.log</span>
+    </div>
+    <div class="icon" onclick="toggleWindow('reading')">
+      <img src="assets/txt.png" alt="Currently Reading"/>
+      <span>CurrentlyReading.txt</span>
+    </div>
+    <div class="icon" onclick="window.open('https://twitter.com/yitzzzzz')">
+      <img src="assets/url.png" alt="Twitter"/>
+      <span>Twitter.url</span>
+    </div>
+    <div class="icon" onclick="window.open('https://yitz.substack.com/')">
+      <img src="assets/url.png" alt="Substack"/>
+      <span>Substack.url</span>
+    </div>
+    <div class="icon" onclick="window.open('https://www.linkedin.com/in/isaac-friedman-983948202/')">
+      <img src="assets/url.png" alt="LinkedIn"/>
+      <span>LinkedIn.url</span>
+    </div>
+  </div>
+
+  <div class="window" id="about">
+    <div class="title-bar">
+      <span>AboutMe.exe</span>
+      <button onclick="toggleWindow('about')">X</button>
+    </div>
+    <div class="window-body">
+      <p>I am in an explorative stage of my life and looking for the next big thing.</p>
+      <p>My background is rooted in investing (I operated a small fund at 18) and Jewish studies (I spent 4 years studying almost exclusively Talmud after high school).</p>
+    </div>
+  </div>
+
+  <div class="window" id="reading">
+    <div class="title-bar">
+      <span>CurrentlyReading.txt</span>
+      <button onclick="toggleWindow('reading')">X</button>
+    </div>
+    <div class="window-body">
+      <p>View my currently reading list on <a href="https://www.goodreads.com/review/list/177841658-yitz-friedman?ref=nav_mybooks&shelf=currently-reading" target="_blank">Goodreads</a>.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
