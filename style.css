@@ -1,0 +1,85 @@
+/* Global styles */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    overflow-x: hidden;
+}
+
+canvas#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5vh 1rem;
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.hero img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #00ff00;
+    margin-bottom: 1.5rem;
+}
+
+.terminal-line {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+    display: inline-block;
+}
+
+/* Blinking cursor */
+.terminal-line::after {
+    content: "_";
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Links */
+ul.links {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+ul.links.show {
+    opacity: 1;
+}
+
+ul.links li {
+    margin: 0.4rem 0;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+a:hover {
+    text-decoration: underline;
+}
